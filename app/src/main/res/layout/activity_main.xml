@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Titre -->
+        <TextView
+            android:id="@+id/textViewTitre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:text="@string/titre_imc"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <!-- Champ Poids -->
+        <EditText
+            android:id="@+id/editTextPoids"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:hint="@string/hint_poids"
+            android:inputType="numberDecimal"
+            android:importantForAutofill="no" />
+
+        <!-- Champ Taille -->
+        <EditText
+            android:id="@+id/editTextTaille"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:hint="@string/hint_taille"
+            android:inputType="numberDecimal"
+            android:importantForAutofill="no" />
+
+        <!-- Boutons Calculer / Effacer -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonCalculer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:text="@string/bouton_calculer" />
+
+            <Button
+                android:id="@+id/buttonEffacer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:text="@string/bouton_effacer" />
+        </LinearLayout>
+
+        <!-- Résultat : valeur de l'IMC -->
+        <TextView
+            android:id="@+id/textViewImcLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_imc"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textViewImc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text=""
+            android:textSize="48sp"
+            android:textStyle="bold" />
+
+        <!-- Résultat : catégorie -->
+        <TextView
+            android:id="@+id/textViewCategorieLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_categorie"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textViewCategorie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</ScrollView>
